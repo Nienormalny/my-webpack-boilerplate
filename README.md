@@ -22,3 +22,18 @@ Make new issue and i will look at it.
 🧰 3. `npm start` - to start your `http://localhost:3000`
 
 💚 4. `npm build` - to build your product.
+
+## A little bit automation for you.
+
+Create new page:
+1. `npm run add-page <your page name>`:
+ - it will create new directory inside `./src/pages/` with name of your defined page.
+ - it will create inside your **new** directory files: `yourpagename.html`, `yourpagename.js`, `yourpagename.scss`
+ - it will add `<script>` inside **yourpagename.html** with src to **yourpagename.js**
+ - it will add `@import "../pages/yourpagename/yourpagename.scss";` to `./src/styles/imports.scss`;
+ - it will add `<require path="../pages/yourpagename/yourpagename.html"></require>` to `./src/pages/homepage/homepage.html`
+ 
+2. `npm run remove-page <your page name>`:
+ - it will remove directory with **yourpagename** inside `./src/pages/`
+ - it will remove `@import "../pages/yourpagename/yourpagename.scss"` from `./src/styles/imports.scss`
+ - it will remove `<require path="../pages/yourpagename/yourpagename.html"></require>` from `./src/pages/homepage/homepage.html`
