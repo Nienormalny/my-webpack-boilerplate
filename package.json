@@ -1,0 +1,57 @@
+{
+  "name": "my-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "My definition of webpack boilerplate",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --host 0.0.0.0 --progress --hot-only --inline --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nienormalny/my-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "webpack",
+    "js",
+    "html5",
+    "modules",
+    "boilerplate",
+    "sass"
+  ],
+  "author": "Dawid Szadurski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nienormalny/my-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Nienormalny/my-webpack-boilerplate#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "aframe-super-hot-html-loader": "^2.1.0",
+    "aframe-super-hot-loader": "^1.7.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-minify": "^0.5.1",
+    "html-loader": "^1.3.1",
+    "html-require-loader": "^1.0.1",
+    "ip": "^1.1.5",
+    "super-nunjucks-loader": "^2.0.0",
+    "url-loader": "^4.1.0",
+    "webpack-sources": "^2.0.1"
+  },
+  "semistandard": {
+    "ignore": [
+      "build/**"
+    ]
+  }
+}
