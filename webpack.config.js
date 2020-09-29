@@ -28,6 +28,12 @@ module.exports = {
                 use: ['babel-loader', 'aframe-super-hot-loader']
             },
             {
+                test: /\.json/,
+                exclude: /(node_modules)/,
+                type: "javascript/auto",
+                use: 'json-loader'
+            },
+            {
                 test: /\.html/,
                 exclude: /(node_modules)/,
                 use: [
@@ -48,7 +54,7 @@ module.exports = {
                     {
                         loader: 'html-require-loader',
                         options: {
-                        root: path.resolve(__dirname, 'src')
+                            root: path.resolve(__dirname, 'src')
                         }
                     }
                 ]

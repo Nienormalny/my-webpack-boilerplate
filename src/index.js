@@ -6,6 +6,6 @@ console.timeEnd = () => {};
 // requireAll(require.context('./components/', true, /\.js$/));
 // requireAll(require.context('./components/', true, /\.html$/));
 require('./styles/styles.scss');
-require('./homepage.html');
+require('./pages/homepage/page.js');
 
 if (module.hot) {module.hot.accept();}
