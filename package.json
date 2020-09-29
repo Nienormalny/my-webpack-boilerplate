@@ -5,14 +5,14 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --host 0.0.0.0 --progress --hot-only --inline --port 3000",
+    "start": "webpack-dev-server --host 0.0.0.0 --hot-only --inline --port 3030",
     "add-page": "func() { mkdir ./src/pages/${1:-somepage}; npm run add-file-html ${1:-somepage};}; func",
     "add-file-html": "func() { touch ./src/pages/${1:-somepage}/${1:-somefile}.html; echo '<h1>Your new <span>'${1:-somefile}'</span> Page</h1>' >> ./src/pages/${1:-somepage}/${1:-somefile}.html; npm run add-file-sass ${1:-somepage};}; func",
     "add-file-sass": "func() { touch ./src/pages/${1:-somepage}/${1:-somefile}.scss; echo 'h1 > span {color: red}' >> ./src/pages/${1:-somepage}/${1:-somefile}.scss; npm run add-file-js ${1:-somepage};}; func",
-    "add-file-js": "func() { touch ./src/pages/${1:-somepage}/${1:-somepage}.js; echo '<script src=\"./'${1:-somepage}.js'\"></script>' >> ./src/pages/${1:-somepage}/${1:-somepage}.html; echo '@import \"../pages/'${1:-somepage}'/'${1:-somefile}.scss'\";' >> ./src/styles/imports.scss; npm run add-to-homepage ${1:-somepage};}; func",
+    "add-file-js": "func() { touch ./src/pages/${1:-somepage}/${1:-somepage}.js; echo 'console.log(\"__HELLO__FRIEND__ON__'${1:-somepage}'__PAGE\");' >> ./src/pages/${1:-somepage}/${1:-somepage}.js; echo 'require(\"../'${1:-somepage}'/'${1:-somepage}.js'\");' >> ./src/pages/homepage/page.js; echo '@import \"../pages/'${1:-somepage}'/'${1:-somefile}.scss'\";' >> ./src/styles/imports.scss; npm run add-to-homepage ${1:-somepage};}; func",
     "add-to-homepage": "func() { echo '<require path=\"../src/pages/'${1:-somepage}'/'${1:-somefile}.html'\"></require>' >> ./src/pages/homepage/homepage.html;}; func",
-    "remove-page": "func() { rm -rf ./src/pages/${1:-somepage}; npm run clear-files ${1:-somepage};}; func",
-    "clear-files": "func() { sed -i '/'${1:-somefile}'/g' ./src/styles/imports.scss; sed -i '/'${1:-somefile}'/g' ./src/pages/homepage/homepage.html;}; func"
+    "remove-page": "func() { npm run clear-files ${1:-somepage}; rm -rf ./src/pages/${1:-somepage};}; func",
+    "clear-files": "func() { sed -i '/'${1:-somefile}'/g' ./src/pages/homepage/homepage.html; sed -i '/'${1:-somefile}'/g' ./src/styles/imports.scss; sed -i '/'${1:-somefile}'/g' ./src/pages/homepage/page.js;}; func"
   },
   "repository": {
     "type": "git",
