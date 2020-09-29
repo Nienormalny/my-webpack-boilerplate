@@ -1,8 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap');
 @import './imports.scss';
+@import './colors.scss';
+
 * {
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    &::-webkit-scrollbar {
+        width: 15px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $dark-gray;
+    }
+}
+html {
+    font-size: 18px;
 }
 body {
     margin: 0;
     padding: 0;
+}
+header {
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    background-color: $header-color;
+    color: $font-color;
+    nav {
+        display: flex;
+        font-size: 1rem;
+        > h3 {
+            font-weight: bold;
+        }
+        > ul {
+            margin-left: auto;
+            display: flex;
+            list-style: none;
+
+            li {
+                font-size: 1rem;
+                padding: 5px 25px;
+                text-align: center;
+                cursor: pointer;
+                transition: background-color 0.5s ease;
+                margin-left: 5px;
+                &:hover {
+                    background-color: transparentize($color: $black, $amount: 0.5);
+                }
+            }
+        }
+    }
+}
+main {
+    section {
+        padding: 25px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $ligth-background;
+        &.dark-background {
+            background-color: $dark-background;
+            h1, h2 {
+                color: $font-color;
+            }
+            h2 {
+                padding: 5px 15px;
+                background-color: darken($color: $font-color, $amount: 60%);
+            }
+        }
+    }
+}
+.text-bold {
+    font-weight: 900;
 }

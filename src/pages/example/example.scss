@@ -1,0 +1,15 @@
+@import '../../styles/colors.scss';
+
+h1>span {
+    color: $red;
+}
+
+#example {
+    padding: 10px 25px;
+    margin: 15px;
+    background-color: $red;
+    color: $font-color;
+    font-size: 2rem;
+    width: fit-content;
+    font-weight: lighter;
+}
