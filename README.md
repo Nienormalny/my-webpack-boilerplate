@@ -16,6 +16,9 @@ Make new issue and i will look at it.
 
 ## How to use?
 💾 1. `git clone` - Standard :-)
+
 ⚙️ 2. `npm install` - to install all packages.
+
 🧰 3. `npm start` - to start your `http://localhost:3000`
+
 💚 4. `npm build` - to build your product.
