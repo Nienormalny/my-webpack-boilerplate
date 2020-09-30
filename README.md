@@ -9,7 +9,8 @@ It is very easy to use for begginers.
 2. Importing HTML files in HTML files with new **tag** `<require path="./path/to/your/html/file"></require>`.
 3. Posibility to use packages inside `.js` files with `require('package')`.
 4. Minify code in build process.
-5. And more... just check it out in packages.json to get more info about packeges i added to it. Same for webpack.config.js
+5. Import **JSON** files as objects to your `.js`.
+6. And more... just check it out in packages.json to get more info about packeges i added to it. Same for webpack.config.js
 
 ### Do you see any problems?
 Make new issue and i will look at it.
